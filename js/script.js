@@ -7,7 +7,7 @@ import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import menuMobile from './modules/menu-mobile.js';
 import funcionamento from './modules/funcionamento.js';
-import initFetchAnimais from './modules/fetch-animais.js';
+import fetchAnimais from './modules/fetch-animais.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 
 const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
@@ -25,9 +25,10 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
+fetchAnimais('./animais-api.json', '.numeros-grid');
+
 animacaoScroll();
 initDropdownMenu();
 menuMobile();
 funcionamento();
-initFetchAnimais();
 initFetchBitcoin();
