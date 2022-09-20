@@ -1,6 +1,6 @@
 import TabNav from './modules/tabNav.js';
 import ScrollSuave from './modules/scroll-suave.js';
-import animacaoScroll from './modules/animacaoScroll.js';
+import AnimarScroll from './modules/animacaoScroll.js';
 import Accordion from './modules/accordion.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
@@ -16,6 +16,9 @@ tabNav.init();
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 
+const animarScroll = new AnimarScroll('[data-anime="scroll"]');
+animarScroll.init();
+
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
@@ -28,7 +31,6 @@ tooltip.init();
 fetchAnimais('./animais-api.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
-animacaoScroll();
 initDropdownMenu();
 menuMobile();
 funcionamento();
