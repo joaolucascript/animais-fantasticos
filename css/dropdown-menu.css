@@ -1,0 +1,46 @@
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
+  display: none;
+}
+
+[data-dropdown]:hover .dropdown-menu,
+[data-dropdown].active .dropdown-menu {
+  display: block;
+  animation: dropdown 0.2s forwards;
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: #e54;
+  border: 2px solid #333;
+  z-index: 200;
+  top: 36px;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -20px;
+  left: 20px;
+  border: 10px solid transparent;
+  border-bottom-color: #e54;
+}
+
+.dropdown-menu li a:hover {
+  color: #fff;
+}
