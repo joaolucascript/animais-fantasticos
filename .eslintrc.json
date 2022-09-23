@@ -14,6 +14,7 @@
     "no-param-reassign": "off",
     "import/extensions": "off",
     "no-console": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "max-classes-per-file": "off"
   }
 }
