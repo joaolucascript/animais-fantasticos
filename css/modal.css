@@ -17,10 +17,13 @@
 
 .modal {
   background: white;
+  width: 80vw;
+  max-width: 600px;
   padding: 2rem;
   border: 10px solid #fb5;
   box-shadow: 0 0 0 10px white;
   position: relative;
+  box-sizing: border-box;
 }
 
 @keyframes modal {
@@ -45,18 +48,15 @@
   right: -30px;
   width: 50px;
   height: 50px;
-  font-size: 2rem;
   cursor: pointer;
-  background: #e54;
+  background: #e54 url('../img/fechar.svg') no-repeat center center;
   border: 4px solid white;
   border-radius: 50%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  color: white;
-  font-family: "Fira Code", monospace;
 }
 
 .modal label {
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 1.2rem;
   display: block;
   margin: 1rem 0 0.5rem 0;
@@ -66,14 +66,13 @@
 .modal input {
   display: block;
   width: 100%;
-  min-width: 300px;
   padding: 0.5rem;
   font-size: 1.2rem;
-  border: 1px solid #ddd;
+  border: 2px solid #222;
   margin-bottom: 1rem;
 }
 
-.modal button[type="submit"] {
+.modal button[type='submit'] {
   display: block;
   padding: 0.7rem 2rem;
   font-size: 1.2rem;
@@ -81,7 +80,7 @@
   margin-top: 1rem;
   background: #e54;
   color: white;
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   font-weight: bold;
   cursor: pointer;
 }
